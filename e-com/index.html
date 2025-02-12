@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+   
+    <header>
+      <div class="navbar">
+        <div class="nav-logo">
+          <div class="logo"></div>
+        </div>
+      <span class="search">
+        <input type="text" id="searchProduct" placeholder="Search for products...">
+        <button onclick="searchProducts()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </span>
+    <div class="cart">
+        <button onclick="viewCart()"><i class="fa-solid fa-cart-shopping"></i>View Cart</button>
+        <span id="cart-count">0 items</span> 
+    </div>
+</div>
+
+</header>
+
+    <section id="product-list">
+        <div class="product" id="product-1">
+            <img src="box3_image.jpg" alt="Product 1">
+            <h4>Table</h4>
+            <p>15000.Rs</p>
+            <button onclick="addToCart(1)">Add to Cart</button>
+        </div>
+        <div class="product" id="product-2">
+            <img src="box4_image.jpg" alt="Product 2">
+            <h4>Phone</h4>
+            <p>75000.Rs</p>
+            <button onclick="addToCart(2)">Add to Cart</button>
+        </div>
+        <div class="product" id="product-3">
+            <img src="laptop.jpg" alt="Product 3">
+            <h4>laptop</h4>
+            <p>95000.Rs</p>
+            <button onclick="addToCart(3)">Add to Cart</button>
+        </div>
+        <div class="product" id="product-2">
+            <img src="smart watch.jpg" alt="Product 2">
+            <h4>Smart watch</h4>
+            <p>2000.Rs</p>
+            <button onclick="addToCart(2)">Add to Cart</button>
+        </div>
+        <div class="product" id="product-2">
+            <img src="lapto 2.webp" alt="Product 2">
+            <h4>Laptop 2</h4>
+            <p>2000.Rs</p>
+            <button onclick="addToCart(2)">Add to Cart</button>
+        </div>
+    </section> 
+    <div id="cart-modal" style="display:none;">
+        <div class="cart-details">
+            <h2>Your Cart</h2>
+            <div id="cart-item"></div> 
+            <button onclick="checkout()">Proceed to Checkout</button>
+            <button onclick="closeCart()">Close</button>
+        </div>
+    </div>
+    
+    <footer>&#169; 1996-2025, Amazon.com, Inc. or its affiliates</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
